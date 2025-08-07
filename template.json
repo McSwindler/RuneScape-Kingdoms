@@ -14,80 +14,79 @@
       "npc": {
         "lp": {
           "min": 0,
-          "value": 10,
-          "label": "Life Points"
+          "value": 10
         },
-        "Armour Value": 0
+        "av": 0
       },
       "attributes": {
-        "strength": {
+        "str": {
           "min": 1,
           "value": 1,
           "max": 8
         },
-        "agility": {
+        "agi": {
           "min": 1,
           "value": 1,
           "max": 8
         },
-        "intellect": {
+        "int": {
           "min": 1,
           "value": 1,
           "max": 8
         }
       },
       "skills": {
-        "archaeology": {
+        "arch": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "attack": {
+          "atk": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "cooking": {
+          "cook": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "crafting": {
+          "craft": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "defence": {
+          "def": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "dungeoneering": {
+          "dung": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "farming": {
+          "farm": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "fishing": {
+          "fish": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "fletching": {
+          "fltch": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "herblore": {
+          "herb": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "hunter": {
+          "hunt": {
             "min": 1,
             "value": 1,
             "max": 10
@@ -97,47 +96,47 @@
             "value": 1,
             "max": 10
           },
-          "mining": {
+          "mine": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "prayer": {
+          "pray": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "ranged": {
+          "range": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "runecrafting": {
+          "rc": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "slayer": {
+          "slay": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "smithing": {
+          "smith": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "summoning": {
+          "smn": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "thieving": {
+          "thiev": {
             "min": 1,
             "value": 1,
             "max": 10
           },
-          "woodcutting": {
+          "wc": {
             "min": 1,
             "value": 1,
             "max": 10

@@ -11,5 +11,7 @@ npm-debug.log
 jsconfig.json
 foundry
 
-# Boilerplate
+# Build
 build/
+runescape-kingdoms.css.map
+runescape-kingdoms-compiled*

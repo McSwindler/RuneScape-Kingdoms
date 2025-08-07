@@ -1,23 +1,23 @@
-export const BOILERPLATE = {};
+export const RUNESCAPE_KINGDOMS = {};
 
 /**
  * The set of Ability Scores used within the system.
  * @type {Object}
  */
-BOILERPLATE.abilities = {
-  str: 'BOILERPLATE.Ability.Str.long',
-  dex: 'BOILERPLATE.Ability.Dex.long',
-  con: 'BOILERPLATE.Ability.Con.long',
-  int: 'BOILERPLATE.Ability.Int.long',
-  wis: 'BOILERPLATE.Ability.Wis.long',
-  cha: 'BOILERPLATE.Ability.Cha.long',
+RUNESCAPE_KINGDOMS.abilities = {
+  str: 'RUNESCAPE_KINGDOMS.Ability.Str.long',
+  dex: 'RUNESCAPE_KINGDOMS.Ability.Dex.long',
+  con: 'RUNESCAPE_KINGDOMS.Ability.Con.long',
+  int: 'RUNESCAPE_KINGDOMS.Ability.Int.long',
+  wis: 'RUNESCAPE_KINGDOMS.Ability.Wis.long',
+  cha: 'RUNESCAPE_KINGDOMS.Ability.Cha.long',
 };
 
-BOILERPLATE.abilityAbbreviations = {
-  str: 'BOILERPLATE.Ability.Str.abbr',
-  dex: 'BOILERPLATE.Ability.Dex.abbr',
-  con: 'BOILERPLATE.Ability.Con.abbr',
-  int: 'BOILERPLATE.Ability.Int.abbr',
-  wis: 'BOILERPLATE.Ability.Wis.abbr',
-  cha: 'BOILERPLATE.Ability.Cha.abbr',
+RUNESCAPE_KINGDOMS.abilityAbbreviations = {
+  str: 'RUNESCAPE_KINGDOMS.Ability.Str.abbr',
+  dex: 'RUNESCAPE_KINGDOMS.Ability.Dex.abbr',
+  con: 'RUNESCAPE_KINGDOMS.Ability.Con.abbr',
+  int: 'RUNESCAPE_KINGDOMS.Ability.Int.abbr',
+  wis: 'RUNESCAPE_KINGDOMS.Ability.Wis.abbr',
+  cha: 'RUNESCAPE_KINGDOMS.Ability.Cha.abbr',
 };

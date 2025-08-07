@@ -1,16 +1,36 @@
 {
-  "BOILERPLATE": {
-    "Ability": {
+  "RUNESCAPE_KINGDOMS": {
+    "Attributes": {
       "Str": { "long": "Strength", "abbr": "str" },
-      "Con": { "long": "Constitution", "abbr": "con" },
-      "Dex": { "long": "Dexterity", "abbr": "dex" },
-      "Int": { "long": "Intelligence", "abbr": "int" },
-      "Wis": { "long": "Wisdom", "abbr": "wis" },
-      "Cha": { "long": "Charisma", "abbr": "cha" }
+      "Agi": { "long": "Agility", "abbr": "agi" },
+      "Int": { "long": "Intellect", "abbr": "int" }
+    },
+    "Skills": {
+      "Arch": { "long": "Archeology", "abbr": "arch" },
+      "Atk": { "long": "Attack", "abbr": "atk" },
+      "Cook": { "long": "Cooking", "abbr": "cook" },
+      "Craft": { "long": "Crafting", "abbr": "craft" },
+      "Def": { "long": "Defence", "abbr": "def" },
+      "Dung": { "long": "Dungeoneering", "abbr": "dung" },
+      "Farm": { "long": "Farming", "abbr": "farn" },
+      "Fish": { "long": "Fishing", "abbr": "fish" },
+      "Fltch": { "long": "Fletching", "abbr": "fltch" },
+      "Herb": { "long": "Herblore", "abbr": "herb" },
+      "Hunt": { "long": "Hunter", "abbr": "hunt" },
+      "Mage": { "long": "Magic", "abbr": "mage" },
+      "Mine": { "long": "Mining", "abbr": "mine" },
+      "Pray": { "long": "Prayer", "abbr": "pray" },
+      "Rng": { "long": "Ranged", "abbr": "rng" },
+      "Rc": { "long": "Runecrafting", "abbr": "rc" },
+      "Slay": { "long": "Slayer", "abbr": "slay" },
+      "Smith": { "long": "Smithing", "abbr": "smith" },
+      "Smn": { "long": "Summoning", "abbr": "smn" },
+      "Thiev": { "long": "Thieving", "abbr": "thiev" },
+      "Wc": { "long": "Woodcutting", "abbr": "wc" }
     },
     "SheetLabels": {
-      "Actor": "Boilerplate Actor Sheet",
-      "Item": "Boilerplate Item Sheet"
+      "Actor": "RuneScape Kingdoms Actor Sheet",
+      "Item": "RuneScape Kingdoms Item Sheet"
     },
     "Item": {
       "Spell": {
@@ -30,12 +50,11 @@
   "TYPES": {
     "Actor": {
       "character": "Character",
-      "npc": "NPC"
+      "npc": "NPC",
+      "familiar": "Familiar"
     },
     "Item": {
-      "item": "Item",
-      "feature": "Feature",
-      "spell": "Spell"
+      "item": "Item"
     }
   }
 }
