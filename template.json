@@ -3,6 +3,11 @@
     "types": ["character", "npc", "familiar"],
     "templates": {
       "base": {
+        "lp": {
+          "min": 0,
+          "value": 10,
+          "max": 10
+        },
         "movement": {
           "value": 2,
           "min": 0,
@@ -12,11 +17,20 @@
         "biography": ""
       },
       "npc": {
-        "lp": {
-          "min": 0,
-          "value": 10
-        },
         "av": 0
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "pp": {
+          "min": 0,
+          "value": 3,
+          "max": 3
+      },
+      "sp": {
+          "min": 0,
+          "value": 5,
+          "max": 5
       },
       "attributes": {
         "str": {
@@ -37,114 +51,111 @@
       },
       "skills": {
         "arch": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "atk": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "cook": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "craft": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "def": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "dung": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "farm": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "fish": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "fltch": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "herb": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "hunt": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "magic": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "mine": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "pray": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "range": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "rc": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "slay": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "smith": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "smn": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "thiev": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          },
-          "wc": {
-            "min": 1,
-            "value": 1,
-            "max": 10
-          }
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "atk": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "cook": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "craft": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "def": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "dung": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "farm": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "fish": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "fltch": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "herb": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "hunt": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "magic": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "mine": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "pray": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "range": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "rc": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "slay": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "smith": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "smn": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "thiev": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "wc": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        }
       }
-    },
-    "character": {
-      "templates": ["base", "attributes", "skills"]
     },
     "npc": {
       "templates": ["base", "npc"]

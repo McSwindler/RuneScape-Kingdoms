@@ -1,0 +1,24 @@
+<form autocomplete="off">
+  <div class="grid grid-2col">
+    <label for="roll.attribute" class="resource-label">{{localize "RUNESCAPE_KINGDOMS.ActorLabels.Attribute"}}</label>
+    <select name="roll.attribute" required>
+      <option disabled{{#unless roll.attribute}} selected{{/unless}}/>
+      {{#each actor.attributes as |attribute key|}}
+      <option value="{{attribute.value}}"{{#if (eq key ../roll.attribute)}} selected{{/if}}>{{localize (concat 'RUNESCAPE_KINGDOMS.Attributes.' key '.long')}}: {{attribute.value}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="grid grid-2col">
+    <label for="roll.skill" class="resource-label">{{localize "RUNESCAPE_KINGDOMS.ActorLabels.Skill"}}</label>
+    <select name="roll.skill" required>
+      <option disabled {{#unless roll.skill}} selected{{/unless}}/>
+      {{#each actor.skills as |skill key|}}
+      <option value="{{skill.value}}"{{#if (eq key ../roll.skill)}} selected{{/if}}>{{localize (concat 'RUNESCAPE_KINGDOMS.Skills.' key '.long')}}: {{skill.value}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="grid grid-2col">
+    <label for="roll.modifier" class="resource-label">{{localize "RUNESCAPE_KINGDOMS.ActorLabels.TNMod"}}</label>
+    <input type="number" name="roll.modifier" value="0" data-dtype="Number" min="-18" max="18" required/>
+  </div>
+</form>

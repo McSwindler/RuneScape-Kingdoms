@@ -223,6 +223,49 @@ export class RuneScapeKingdomsActorSheet extends ActorSheet {
   }
 
   /**
+   * Handle Roll event callback
+   * @param {Object} html   HTML of the roll dialog
+   * @private
+   */
+  _rollCallback(html) {
+    let tn = 0;
+    if(html.find("[name='roll.attribute']").val() && !isNaN(html.find("[name='roll.attribute']").val())) {
+      tn += parseInt(html.find("[name='roll.attribute']").val());
+    } else {
+      throw new Error("Please select an attribute.");
+    }
+    if(html.find("[name='roll.skill']").val() && !isNaN(html.find("[name='roll.skill']").val())) {
+      tn += parseInt(html.find("[name='roll.skill']").val());
+    } else {
+      throw new Error("Please select a skill.");
+    }
+    let mod = parseInt(html.find("[name='roll.modifier']").val()) || 0;
+    tn += mod;
+
+    let label = `[skill test] ${html.find("[name='roll.skill'] :selected").text().split(":")[0]} + ${html.find("[name='roll.attribute'] :selected").text().split(":")[0]}`;
+    if(mod > 0) {
+      label += ` +${mod} TN Modifier`
+    } else if(mod < 0) {
+      label += ` ${mod} TN Modifier`
+    }
+    let speaker = ChatMessage.getSpeaker({ actor: this.actor });
+    new Roll(`3d6`).roll().then(roll => {
+      let text = '';
+      if(roll.total <= tn) {
+        text = `<span style="color:green"><h2>Success!</h2>You rolled <a class="inline-result"><i class="fas fa-dice"></i> ${roll.total}</a><br />${tn - roll.total} below the target number ${tn}</a>`; 
+      } else {
+        text = `<span style="color:red"><h2>Failure!</h2>You rolled <a class="inline-result"><i class="fas fa-dice"></i> ${roll.total}</a><br />${roll.total - tn} above the target number ${tn}</a>`; 
+      }
+      ChatMessage.create({
+        speaker: speaker,
+        flavor: label,
+        content: text
+      });
+    });
+    
+  }
+
+  /**
    * Handle clickable rolls.
    * @param {Event} event   The originating click event
    * @private
@@ -231,6 +274,29 @@ export class RuneScapeKingdomsActorSheet extends ActorSheet {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
+
+    if(dataset.attribute || dataset.skill) {
+      renderTemplate("systems/runescape-kingdoms/templates/actor/parts/actor-roll.hbs", {
+        roll: {
+          attribute: dataset.attribute,
+          skill: dataset.skill
+        },
+        actor: this.actor.system
+      }).then(rollDialog => {
+        new Dialog({
+          title: "Skill Test",
+          content: rollDialog,
+          buttons: {
+            roll: {
+              label: "Roll!",
+              callback: (html) => this._rollCallback(html),
+              icon: `<i class="fas fa-dice"></i>`
+            }
+          }
+        }).render(true);
+      });
+      return;
+    }
 
     // Handle item rolls.
     if (dataset.rollType) {
